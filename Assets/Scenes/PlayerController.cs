@@ -20,4 +20,12 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(movement * speed);
     }
+
+    private void OnCollisionEnter(Collision enemy)
+    {
+        if (enemy.gameObject.tag == "Enemy")
+        {
+            // tell player you lose.
+        }
+    }
 }
