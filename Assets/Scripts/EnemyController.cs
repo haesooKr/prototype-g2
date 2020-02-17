@@ -16,5 +16,6 @@ public class EnemyController : MonoBehaviour
         {
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
         }
+        
     }
 }
