@@ -26,6 +26,7 @@ public class PlayerController : MonoBehaviour
         if (enemy.gameObject.tag == "Enemy")
         {
             // tell player you lose.
+            // then stop the game.
         }
     }
 }

@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 6422230202206243398}
   - component: {fileID: 6422230202206243417}
   m_Layer: 8
-  m_Name: Enemy 1
+  m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -107,7 +107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 0}
-  MoveSpeed: 1
+  MoveSpeed: 3
   MinDist: 0
 --- !u!54 &6422230202206243417
 Rigidbody:
