@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemyController : MonoBehaviour
 {
     public Transform Player;
-    public int MoveSpeed = 1;
+    public int MoveSpeed = 1; // you can adjust speed based on different level
     public int MinDist = 0;
 
     void Update()
@@ -16,6 +16,7 @@ public class EnemyController : MonoBehaviour
         {
             transform.position += transform.forward * MoveSpeed * Time.deltaTime;
         }
+        // enemy (red ball automatically follows player)
         
     }
 }

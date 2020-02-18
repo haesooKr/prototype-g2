@@ -9,6 +9,8 @@ public class Timer : MonoBehaviour
     public Text timerText;
     public float duplicateInverval;
     public GameObject enemyObj;
+
+
     private float timeRecord;
     private float timeInterval;
     void Update()
@@ -40,6 +42,6 @@ public class Timer : MonoBehaviour
     void DuplicateObj()
     {
         GameObject clone = GameObject.Instantiate(enemyObj);
-        clone.transform.position = new Vector3(0, 0, 0); //generated position
+        clone.transform.position = new Vector3(0, 0, 0); //position where enemy generated
     }
 }

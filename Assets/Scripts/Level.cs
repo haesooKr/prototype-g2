@@ -11,5 +11,6 @@ public class Level : MonoBehaviour
     void Update()
     {
         levelText.text = string.Format("Level {0}", SceneManager.GetActiveScene().buildIndex);
+        // When Scene change, level text will automatically update
     }
 }

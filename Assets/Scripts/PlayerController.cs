@@ -20,6 +20,7 @@ public class PlayerController : MonoBehaviour
 
         rb.AddForce(movement * speed);
     }
+    // control movement of player (black ball)
 
     private void OnCollisionEnter(Collision enemy)
     {
