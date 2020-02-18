@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -26,8 +27,7 @@ public class PlayerController : MonoBehaviour
     {
         if (enemy.gameObject.tag == "Enemy")
         {
-            // tell player you lose.
-            // then stop the game.
+            SceneManager.LoadScene("Scene_Start");
         }
     }
 }
