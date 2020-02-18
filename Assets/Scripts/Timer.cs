@@ -19,7 +19,7 @@ public class Timer : MonoBehaviour
         float minutes = timeRecord / 60;
         float seconds = timeRecord % 60;
 
-        timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        timerText.text = string.Format("Timer {0:00} : {1:00}", minutes, seconds);
         // Timer viewer
 
         if(timeInterval > duplicateInverval)
