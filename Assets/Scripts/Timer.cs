@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Timer : MonoBehaviour
 {
     public Text timerText;
+    public float duplicateInverval;
     public GameObject enemyObj;
     private float timeRecord;
     private float timeInterval;
@@ -18,11 +20,19 @@ public class Timer : MonoBehaviour
         float seconds = timeRecord % 60;
 
         timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
+        // Timer viewer
 
-        if(timeInterval > 2)
+        if(timeInterval > duplicateInverval)
         {
             timeInterval = 0;
             DuplicateObj();
+            // every duplicateInterval(seconds), enemy will generated.
+        } 
+
+        if(timeRecord > 60)
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            // if player survives more than 60 seconds, will proceed to next level
         }
         
     }
@@ -30,6 +40,6 @@ public class Timer : MonoBehaviour
     void DuplicateObj()
     {
         GameObject clone = GameObject.Instantiate(enemyObj);
-        clone.transform.position = new Vector3(0, 0, 0);
+        clone.transform.position = new Vector3(0, 0, 0); //generated position
     }
 }
