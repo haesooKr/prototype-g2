@@ -18,9 +18,9 @@ public class Timer : MonoBehaviour
         timeRecord += Time.deltaTime;
         timeInterval += Time.deltaTime;
 
-        float seconds = timeRecord % 60;
+        float seconds = timeRecord % 30;
 
-        timerText.text = string.Format("Timer {0:00}", 60-seconds);
+        timerText.text = string.Format("Timer {0:00}", 30-seconds);
         // 60 seconds timer
 
         if(timeInterval > duplicateInverval)
@@ -30,7 +30,7 @@ public class Timer : MonoBehaviour
             // every duplicateInterval(seconds), enemy will generated.
         }
         Debug.Log(timeRecord);
-        if (timeRecord > 60)
+        if (timeRecord > 30)
         {
             
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
