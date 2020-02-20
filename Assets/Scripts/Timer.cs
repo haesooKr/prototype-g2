@@ -18,7 +18,7 @@ public class Timer : MonoBehaviour
         timeRecord += Time.deltaTime;
         timeInterval += Time.deltaTime;
 
-        float seconds = timeRecord % 30;
+        float seconds = timeRecord % 60; // do not change
 
         timerText.text = string.Format("Timer {0:00}", 30-seconds);
         // 60 seconds timer
