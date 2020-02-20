@@ -1,0 +1,23 @@
+We will build a player ball that can be controlled by a keyboard. First Scene will be one start button with black background. After the player clicks the start button, it will automatically guide the player to the first stage of the game. Game starts with a limited size field. This game’s purpose is to survive from Enemy(red sphere) by control. Every two seconds (can be changed through Input setting with different levels), a red enemy will be generated from the center of the field. Players should survive for 30 seconds (every round). 
+
+Scripts:
+PlayerController
+EnemyController
+Level
+StartGame
+Timer
+
+Scences
+Scene_Start
+Scene_0 - level 1
+Scene_1 - level 2
+Scene_2 - level 3
+Scene_3 - level 4
+Scene_4 - level 5
+Scene_End
+
+Prefab(Each has own Material)
+Background
+Enemy
+Field
+Player
